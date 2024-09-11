@@ -3,23 +3,13 @@
   "builds": [
     {
       "src": "server.ts",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "config/**",
-          "controllers/**",
-          "middlewares/**",
-          "models/**",
-          "routes/**",
-          "utils/**"
-        ]
-      }
+      "use": "@now/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/server.ts"
+      "dest": "server.ts"
     }
   ]
 }
